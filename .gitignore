@@ -1,0 +1,6 @@
+bin
+build
+*.code-workspace
+*.json
+ref
+data
