@@ -1,4 +1,5 @@
 #include "shaper.h"
 #include <cmath>
-namespace AudioSignalGenerator {
-} // namespace AudioSignalGenerator
+namespace audio_signal_generator {
+
+} // namespace audio_signal_generator

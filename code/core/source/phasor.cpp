@@ -1,6 +1,6 @@
 #include "phasor.h"
 
-namespace AudioSignalGenerator
+namespace audio_signal_generator
 {
     phasor::phasor(double _freq_, double _peroid_, double _step_, double _epsilon_, double startTime)
             :Timer(_peroid_, _step_, _epsilon_, startTime)
@@ -15,6 +15,6 @@ namespace AudioSignalGenerator
     }
     double phasor::PhasorIterator()
     {
-        return DOUBLE_PI * freq * TimerIterator();
+        return DOUBLE_PI * freq * iterator_timer();
     }
-} // namespace AudioSignalGenerator
+} // namespace audio_signal_generator

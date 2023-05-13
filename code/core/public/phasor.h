@@ -4,8 +4,8 @@
 #include "timer.h"
 #include <cmath>
 
-namespace AudioSignalGenerator {
-    class phasor: private AudioSignalGenerator::Timer
+namespace audio_signal_generator {
+    class phasor: private audio_signal_generator::Timer
     {
     private:
         static constexpr double PI = 3.14159265358979323846;
@@ -16,6 +16,6 @@ namespace AudioSignalGenerator {
         phasor(double _freq_, double _peroid_, double _step_, double _epsilon_ = 1e-7, double startTime = 0);
         double PhasorIterator();
     };
-} // namespace AudioSignalGenerator
+} // namespace audio_signal_generator
 
 #endif

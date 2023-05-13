@@ -1,7 +1,7 @@
 #ifndef __SHAPER_H__
 #define __SHAPER_H__
 
-namespace AudioSignalGenerator {
+namespace audio_signal_generator {
     class shaper
     {
     public:
@@ -25,6 +25,6 @@ namespace AudioSignalGenerator {
     public:
         double apply_shape(double phase);
     };
-} // namespace AudioSignalGenerator
+} // namespace audio_signal_generator
 
 #endif

@@ -1,13 +1,13 @@
 #include "timer.h"
 #include <cmath>
 
-namespace AudioSignalGenerator {
-    Timer::Timer(double _peroid_, double _step_, double _epsilon_, double startTime)
+namespace audio_signal_generator {
+    Timer::Timer(double _peroid_, double _step_, double _epsilon_, double _start_time_)
     {
         peroid  = _peroid_;
         step    = _step_;
         epsilon = _epsilon_;
-        curTime = startTime - step; // for Iterator
+        curTime = _start_time_ - step; // for Iterator
         timeLimit = peroid + step;
     }
 
@@ -15,7 +15,7 @@ namespace AudioSignalGenerator {
     {
     }
 
-    double Timer::TimerIterator()
+    double Timer::iterator_timer()
     {
         curTime += step;
         if(fabs(curTime - timeLimit) < epsilon) {
@@ -23,4 +23,4 @@ namespace AudioSignalGenerator {
         }
         return curTime;
     }
-}  // namespace AudioSignalGenerator
+}  // namespace audio_signal_generator

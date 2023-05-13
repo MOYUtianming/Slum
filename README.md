@@ -1,4 +1,4 @@
-# Audio Signal Generator
+# Slum -- Audio Signal Generator
 
 ## What is this?
 

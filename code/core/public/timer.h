@@ -1,7 +1,7 @@
 #ifndef __TIMER_H__
 #define __TIMER_H__
 
-namespace AudioSignalGenerator {
+namespace audio_signal_generator {
     class Timer
     {
     protected:
@@ -13,8 +13,8 @@ namespace AudioSignalGenerator {
     public:
         Timer(double _peroid_, double _step_, double _epsilon_ = 1e-7, double startTime = 0);
         ~Timer();
-        double TimerIterator();
+        double iterator_timer();
     };
-} // namespace AudioSignalGenerator
+} // namespace audio_signal_generator
 
 #endif
