@@ -2,5 +2,4 @@ bin
 build
 *.code-workspace
 *.json
-ref
-data
+_output
