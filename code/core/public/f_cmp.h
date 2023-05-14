@@ -3,27 +3,32 @@
 
 #include <cmath>
 
-namespace audio_signal_generator {
-    static constexpr double Epsilon = 1e-14; // double precision
-    inline bool f_greater(double a, double b)
+namespace AudioSignalGenerator {
+    static constexpr double EPSILON = 1e-6;
+    template <typename T>
+    inline bool f_greater(T a, T b)
     {
-        return (a - Epsilon) > b;
+        return (a - EPSILON) > b;
     }
-    inline bool f_smaller(double a, double b)
+    template <typename T>
+    inline bool f_smaller(T a, T b)
     {
-        return (a + Epsilon) < b;
+        return (a + EPSILON) < b;
     }
-    inline bool f_equal(double a, double b)
+    template <typename T>
+    inline bool f_equal(T a, T b)
     {
-        return fabs(a - b) < Epsilon;
+        return fabs(a - b) < EPSILON;
     }
-    inline bool f_geq(double a, double b)
+    template <typename T>
+    inline bool f_geq(T a, T b)
     {
         return f_greater(a, b) || f_equal(a, b);
     }
-    inline bool f_seq(double a, double b)
+    template <typename T>
+    inline bool f_seq(T a, T b)
     {
         return f_smaller(a, b) || f_equal(a, b);
     }
-} // namespace audio_signal_generator
+} // namespace AudioSignalGenerator
 #endif

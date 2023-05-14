@@ -4,18 +4,18 @@
 #include "timer.h"
 #include <cmath>
 
-namespace audio_signal_generator {
-    class phasor: private audio_signal_generator::Timer
+namespace AudioSignalGenerator {
+    /**
+     * @brief phase = 2 * pi * f * t
+     *
+     * @return double
+     * @date 2023-05-14
+     */
+    inline double phasor_iterator(double signal_freq, Timer& timer)
     {
-    private:
-        static constexpr double PI = 3.14159265358979323846;
-        static constexpr double DOUBLE_PI = 2*PI;
-        double freq;
-        double cur_phase;
-    public:
-        phasor(double _freq_, double _peroid_, double _step_, double _epsilon_ = 1e-7, double startTime = 0);
-        double PhasorIterator();
-    };
-} // namespace audio_signal_generator
+        constexpr double D_M_PI = M_PI * 2;
+        return D_M_PI * signal_freq * timer.iterator_timer();
+    }
+} // namespace AudioSignalGenerator
 
 #endif
