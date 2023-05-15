@@ -4,31 +4,31 @@
 #include <cmath>
 
 namespace AudioSignalGenerator {
-    static constexpr double EPSILON = 1e-6;
+    static constexpr double epsilon = 1e-6;
     template <typename T>
-    inline bool f_greater(T a, T b)
+    inline bool f_greater(T a, T b, T epsilon)
     {
-        return (a - EPSILON) > b;
+        return (a - epsilon) > b;
     }
     template <typename T>
-    inline bool f_smaller(T a, T b)
+    inline bool f_smaller(T a, T b, T epsilon)
     {
-        return (a + EPSILON) < b;
+        return (a + epsilon) < b;
     }
     template <typename T>
-    inline bool f_equal(T a, T b)
+    inline bool f_equal(T a, T b, T epsilon)
     {
-        return fabs(a - b) < EPSILON;
+        return fabs(a - b) < epsilon;
     }
     template <typename T>
-    inline bool f_geq(T a, T b)
+    inline bool f_geq(T a, T b, T epsilon)
     {
-        return f_greater(a, b) || f_equal(a, b);
+        return f_greater(a, b, epsilon) || f_equal(a, b, epsilon);
     }
     template <typename T>
-    inline bool f_seq(T a, T b)
+    inline bool f_seq(T a, T b, T epsilon)
     {
-        return f_smaller(a, b) || f_equal(a, b);
+        return f_smaller(a, b, epsilon) || f_equal(a, b, epsilon);
     }
 } // namespace AudioSignalGenerator
 #endif

@@ -1,9 +1,9 @@
 #include <fstream>
 #include <iostream>
-#include <phasor.h>
-#include <timer.h>
+#include "phasor.h"
+#include "timer.h"
 
-int test0_phasor(double signal_freq, double freq, double sample_rate, int points)
+int test0_phasor(double freq, double sample_rate, int points)
 {
     AudioSignalGenerator::Timer tr(1.0/freq, 1.0/sample_rate);
 
@@ -17,7 +17,7 @@ int test0_phasor(double signal_freq, double freq, double sample_rate, int points
     fout << "serial,phase_chain" << std::endl;
     double c_phase = 0;
     for(int i = 0; i < points; i++) {
-        c_phase = AudioSignalGenerator::phasor_iterator(signal_freq, tr);
+        c_phase = AudioSignalGenerator::phasor_iterator(freq, tr);
         fout << i << "," << c_phase <<std::endl;
     }
 
@@ -28,6 +28,6 @@ int test0_phasor(double signal_freq, double freq, double sample_rate, int points
 
 int main()
 {
-    return test0_phasor(10, 1, 10, 3*10);
+    return test0_phasor(2, 10, 3*10);
     return 0;
 }
