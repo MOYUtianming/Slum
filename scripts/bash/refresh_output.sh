@@ -6,3 +6,5 @@ for((i=0;i<case_num;i++))
 do
 mkdir $o_dir/case$i/
 done
+rm -rf "./_log"
+mkdir "./_log"

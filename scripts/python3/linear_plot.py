@@ -6,14 +6,14 @@ def plot_timer_chain_with_csv():
         x = dataSet['serial']
         y = dataSet['time_chain']
         plt.plot(x, y, linewidth=2)
-        plt.legend(loc="upper left")
+        # plt.legend(loc="upper left")
         plt.show()
 def plot_sin_chain_with_csv():
-        dataSet = pd.read_csv("_output/case1/test1.csv")
-        x = dataSet['serial'][:]
-        y = dataSet['phase_chain'][:]
+        dataSet = pd.read_csv("_output/case2/test0.csv")
+        x = dataSet['serial'][:100]
+        y = dataSet['sin_chain'][:100]
         plt.plot(x, y, linewidth=2)
-        plt.legend(loc="upper left")
+        # plt.legend(loc="upper left")
         plt.show()
 if __name__ == "__main__":
     print(os.getcwd())

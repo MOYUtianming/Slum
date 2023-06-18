@@ -10,7 +10,8 @@ namespace AudioSignalGenerator {
         step    = _step_;
         epsilon = _epsilon_;
         cur_time = _start_time_ - step; // for iterator logic
-        time_lim = peroid + step; // T + step // for iterator logic
+        time_lim = peroid; // T + step // for iterator logic
+        std::cout << "time_lim:" << time_lim << std::endl;
     }
 
     Timer::~Timer()
@@ -20,10 +21,10 @@ namespace AudioSignalGenerator {
     double Timer::iterator_timer()
     {
         cur_time += step;
-        if(f_geq(cur_time, time_lim)) {
-            cur_time = 0;
+        if(f_greater(cur_time, time_lim, 1e-7)) {
+            cur_time -= peroid;
         }
-        std::cout << "cur_time" << cur_time << std::endl;
+        // std::cout << cur_time << std::endl;
         return cur_time;
     }
 }  // namespace AudioSignalGenerator
