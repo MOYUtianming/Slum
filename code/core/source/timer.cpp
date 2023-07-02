@@ -3,7 +3,7 @@
 #include <cmath>
 #include <iostream>
 
-namespace AudioSignalGenerator {
+namespace Slum {
     Timer::Timer(double _peroid_, double _step_, double _epsilon_, double _start_time_)
     {
         peroid  = _peroid_;
@@ -27,4 +27,4 @@ namespace AudioSignalGenerator {
         }
         return cur_time;
     }
-}  // namespace AudioSignalGenerator
+}  // namespace Slum

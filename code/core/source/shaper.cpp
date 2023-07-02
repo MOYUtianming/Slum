@@ -3,7 +3,7 @@
 #include <stdexcept>
 #include <iostream>
 
-namespace AudioSignalGenerator {
+namespace Slum {
 SinShaper::SinShaper()
 {
 }
@@ -52,4 +52,4 @@ double SinShaper::apply_shape(double phase)
     }
 }
 
-} // namespace AudioSignalGenerator
+} // namespace Slum

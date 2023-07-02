@@ -1,7 +1,7 @@
 #ifndef __TIMER_H__
 #define __TIMER_H__
 
-namespace AudioSignalGenerator {
+namespace Slum {
     class Timer
     {
     protected:
@@ -15,6 +15,6 @@ namespace AudioSignalGenerator {
         ~Timer();
         double iterator_timer();
     };
-} // namespace AudioSignalGenerator
+} // namespace Slum
 
 #endif

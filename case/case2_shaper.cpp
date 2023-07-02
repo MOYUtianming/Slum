@@ -15,14 +15,14 @@ int test0_sin_shaper(unsigned int _taylor_iter_num_,\
         return -1;
     }
 
-    AudioSignalGenerator::Timer timer(1.0/freq, 1.0/sample_rate);
-    AudioSignalGenerator::SinShaper sshaper(_taylor_iter_num_);
+    Slum::Timer timer(1.0/freq, 1.0/sample_rate);
+    Slum::SinShaper sshaper(_taylor_iter_num_);
 
     fout << "serial,phasor_chain,sin_chain" << std::endl;
     double c_sin = 0;
     double phase = 0;
     for(int i = 0; i < points; i++) {
-        phase = AudioSignalGenerator::phasor_iterator(freq, timer);
+        phase = Slum::phasor_iterator(freq, timer);
         c_sin = sshaper.apply_shape(phase);
         fout << i << "," << phase << "," << c_sin << std::endl;
     }

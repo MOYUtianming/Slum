@@ -3,7 +3,7 @@
 
 #include <cmath>
 
-namespace AudioSignalGenerator {
+namespace Slum {
     static constexpr double epsilon = 1e-6;
     template <typename T>
     inline bool f_greater(T a, T b, T epsilon)
@@ -30,5 +30,5 @@ namespace AudioSignalGenerator {
     {
         return f_smaller(a, b, epsilon) || f_equal(a, b, epsilon);
     }
-} // namespace AudioSignalGenerator
+} // namespace Slum
 #endif

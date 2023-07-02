@@ -4,7 +4,7 @@
 #include "timer.h"
 #include <cmath>
 
-namespace AudioSignalGenerator {
+namespace Slum {
     /**
      * @brief phase = 2 * pi * f * t
      *
@@ -16,6 +16,6 @@ namespace AudioSignalGenerator {
         constexpr double D_M_PI = M_PI * 2;
         return D_M_PI * signal_freq * timer.iterator_timer();
     }
-} // namespace AudioSignalGenerator
+} // namespace Slum
 
 #endif
