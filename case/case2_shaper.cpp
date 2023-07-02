@@ -34,6 +34,6 @@ int test0_sin_shaper(unsigned int _taylor_iter_num_,\
 
 int main()
 {
-    test0_sin_shaper(0, 1000, 44100, 44100*2);
+    test0_sin_shaper(10, 1000, 44100, 44100*2);
     return 0;
 }

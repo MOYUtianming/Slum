@@ -6,12 +6,13 @@
 namespace Slum {
 SinShaper::SinShaper()
 {
+    taylor_iter_num = 0;
 }
 SinShaper::SinShaper(unsigned int _taylor_iter_num_)
 {
     try
     {
-        if(_taylor_iter_num_ > TAYLOR_ITER_NUM_LIM) {
+        if(!_taylor_iter_num_ || _taylor_iter_num_ > TAYLOR_ITER_NUM_LIM) {
             throw std::invalid_argument("invalid taylor iter num!");
         }
     }
