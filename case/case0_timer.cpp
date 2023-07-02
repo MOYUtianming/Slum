@@ -6,7 +6,7 @@ int test0_generate_timer_chain_with_const_freq(double freq, double sample_rate, 
     Slum::Timer tr(1.0/freq, 1.0/sample_rate);
 
     std::ofstream fout;
-    fout.open("../_output/case0/test0.csv", std::ios::out);
+    fout.open("./_output/case0/test0.csv", std::ios::out);
     if(!fout.is_open()) {
         std::cout << "open file failed!" << std::endl;
         return -1;

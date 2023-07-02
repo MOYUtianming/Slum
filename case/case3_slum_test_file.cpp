@@ -10,7 +10,7 @@ int test0_open_error_file()
 
 int test1_write_str()
 {
-    std::string str_fn = "../_output/case3/str.log";
+    std::string str_fn = "./_output/case3/str.log";
     Slum::TestFileProcessor tfp(str_fn, std::ios_base::out);
     char hw[] = "hello world!";
     tfp.write_as_char(hw, sizeof(hw));
@@ -30,7 +30,7 @@ int test2_write_bin()
 
 int test3_read_str()
 {
-    std::string str_fn = "../_output/case3/str.log";
+    std::string str_fn = "./_output/case3/str.log";
     Slum::TestFileProcessor tfp(str_fn, std::ios_base::in);
     char buf[1024];
     tfp.read_as_char(buf, sizeof(buf));

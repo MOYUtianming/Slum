@@ -11,6 +11,9 @@ namespace Slum {
      * @return double
      * @date 2023-05-14
      */
+    #ifndef M_PI
+    #define M_PI 3.14159265358979323846
+    #endif
     inline double phasor_iterator(double signal_freq, Timer& timer)
     {
         constexpr double D_M_PI = M_PI * 2;

@@ -15,7 +15,6 @@ namespace Slum {
             std::cerr << e.what() << '\n';
         }
     }
-
     TestFileProcessor::~TestFileProcessor()
     {
         if(fp.is_open()) {
@@ -33,7 +32,6 @@ namespace Slum {
         }
         return 0;
     }
-
     int TestFileProcessor::read_as_char(char* arr, const unsigned int elems) {
         fp.getline(arr, elems);
         return 0;
@@ -42,7 +40,6 @@ namespace Slum {
         fp.write(arr, bytes);
         return bytes;
     }
-
     int TestFileProcessor::read_as_bin(char* arr, const unsigned int bytes) {
         fp.read(arr, bytes);
         return 0;

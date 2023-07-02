@@ -21,10 +21,10 @@ namespace Slum {
     double Timer::iterator_timer()
     {
         cur_time += step;
-        std::cout << cur_time << std::endl;
         if(f_greater(cur_time, time_lim, 1e-7)) {
             cur_time -= peroid;
         }
+        // std::cout << cur_time << std::endl;
         return cur_time;
     }
 }  // namespace Slum
