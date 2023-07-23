@@ -16,7 +16,7 @@ add_executable(case2 ./case2_shaper.cpp)
 target_link_libraries(
     case2 PUBLIC
     Timer
-    Shaper
+    sin_shaper
 )
 
 add_executable(case3 ./case3_slum_test_file.cpp)

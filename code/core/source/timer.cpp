@@ -11,7 +11,7 @@ namespace Slum {
         epsilon = _epsilon_;
         cur_time = _start_time_ - step; // for iterator logic
         time_lim = peroid; // T + step // for iterator logic
-        std::cout << "time_lim:" << time_lim << std::endl;
+        // std::cout << "time_lim:" << time_lim << std::endl;
     }
 
     Timer::~Timer()

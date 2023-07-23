@@ -1,14 +1,16 @@
 #ifndef __SHAPER_H__
 #define __SHAPER_H__
 
+#include "slum_lim.h"
+
 namespace Slum {
+
     class Shaper
     {
     public:
         virtual double apply_shape(double phase) = 0;
     };
 
-    constexpr unsigned int TAYLOR_ITER_NUM_LIM = 1000;
     class SinShaper: public Shaper
     {
     private:
@@ -21,13 +23,21 @@ namespace Slum {
 
     class SqrShaper: public Shaper
     {
+    private:
+        unsigned int taylor_iter_num;
     public:
+        SqrShaper();
+        SqrShaper(unsigned int _taylor_iter_num_);
         double apply_shape(double phase);
     };
 
     class TriShaper: public Shaper
     {
+    private:
+        unsigned int taylor_iter_num;
     public:
+        TriShaper();
+        TriShaper(unsigned int _taylor_iter_num_);
         double apply_shape(double phase);
     };
 } // namespace Slum

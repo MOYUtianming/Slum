@@ -1,6 +1,5 @@
 #ifndef __CHECKER_H__
 #define __CHECKER_H__
-#include <limits.h>
 namespace Slum {
     typedef enum check_status_code {
         CHECK_STATUS_CODE_OK = 0,
