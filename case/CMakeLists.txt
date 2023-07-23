@@ -24,3 +24,7 @@ target_link_libraries(
     case3 PUBLIC
     TestFileProcessor
 )
+
+include_directories(${PROJECT_SOURCE_DIR}/code/plugin/formatter)
+include_directories(${PROJECT_SOURCE_DIR}/code/plugin/print_array)
+add_executable(case4 ./case4_formatter.cpp)

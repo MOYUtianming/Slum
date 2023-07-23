@@ -25,6 +25,6 @@ namespace Slum {
         int read_as_bin(char* arr, const unsigned int bytes);
     };
 
-}
+} // namespace Slum
 
 #endif
